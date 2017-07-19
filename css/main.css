@@ -162,6 +162,8 @@ table {
 .menu__link {
     color: inherit;
     text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
 }
 .logo {
     width: 264px;
@@ -176,9 +178,17 @@ table {
 .logo__contacts {
     padding-top: 5px;
     line-height: 33px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.scroll-block__page_white .logo__contacts,
+.scroll-block__page_white .menu__link {
+     
+    font-weight: normal;
 }
 .menu__item_active .menu__link, .menu__link:hover {
     border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+    text-decoration: none;
 }
 /* Scroll block */
 .scroll-block__page {

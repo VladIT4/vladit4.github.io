@@ -209,6 +209,7 @@ table {
     margin-bottom: -70px;
     padding-bottom: 70px;
     box-sizing: content-box;
+    overflow: hidden;
 }
 .big-slide__title {
     font-size: 70px;

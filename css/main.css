@@ -136,6 +136,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+.fp-tableCell {
+    width: 1280px;
+    margin: 0 auto;
+}
 /* Header */
 .scroll-block__page_main {
     background-color: #02968a;
@@ -197,7 +201,7 @@ table {
 }
 /* Main page */
 .big-slide {
-    width: 1170px;
+    width: 1280px;
     margin: 0 auto;
     height: 100%;
     margin-top: -75px;
@@ -208,14 +212,13 @@ table {
 }
 .big-slide__title {
     font-size: 70px;
-    font-size: 10vh;
+    /* font-size: 10vh; */
     color: white;
     font-weight: bold;
     display: inline-block;
-    width: 50%;
-    vertical-align: middle;
-    margin-left: 22px;
-    margin-right: -78px;
+    width: 56%;
+    margin-left: 69px;
+    margin-right: -180px;
     letter-spacing: 0.6px;
     position: relative;
     z-index: 10;
@@ -224,9 +227,16 @@ table {
     display: inline-block;
     vertical-align: middle;
     background: url(../img/big-slide__image.png) no-repeat center center;
-    width: 50%;
+    max-width: 555px;
     height: 100%;
     background-size: contain;
+    margin: 53px;
+    box-sizing: content-box;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 56px;
+    position: relative;
+    top: -18px;
 }
 /* Footer icons */
 .footer-menu__item {
@@ -290,7 +300,7 @@ table {
 }
 /* Lease */
 .big-lease {
-    width: 1140px;
+    width: 1280px;
     margin: 0 auto;
     padding-bottom: 80px;
 }
@@ -308,21 +318,24 @@ table {
     display: inline-block;
     width: 250px;
     vertical-align: top;
-    margin-top: 37px;
+    margin-top: 54px;
+    padding-left: 66px;
 }
 .big-lease__image {
     display: inline-block;
-    width: 650px;
     vertical-align: top;
     text-align: center;
-    max-width: 60%
+    max-width: 60%;
+    width: 504px;
+    margin: 0px 71px;
+    margin-top: 25px;
 }
 .big-lease__more {
     display: inline-block;
     width: 230px;
     vertical-align: top;
-    margin-left: 28px;
-    margin-top: 37px;
+    margin-left: 37px;
+    margin-top: 62px;
     line-height: 24px;
 }
 .big-service__description h2 {
@@ -368,10 +381,7 @@ table {
 .lease-footer-menu__item_active a {
     color: #e8bb90;
 }
-.big-lease__image {
-    width: 504px;
-    margin: 0px 60px;
-}
+ 
 .big-lease__footer-menu {
     display: none;
 }
@@ -383,8 +393,9 @@ table {
  
 .big-service {
     color: white;
-    width: 1140px;
+    width: 1180px;
     margin: 0 auto;
+    margin-top: 16px;
 }
 .big-service__link {
     color: white;
@@ -395,17 +406,18 @@ table {
     padding: 0px;
     position: relative;
     z-index: 10;
+    width: 234px;
+    padding-left: 13px;
+    float: left;
 }
  
 .services__block {
     width: 100%;
-    margin-left: -215px;
-    padding-left: 215px;
-    box-sizing: border-box;
-    display: inline-block;
+ 
 }
+ 
 .services__item {
-    width: 295px;
+    width: 239px;
     height: 266px;
     background: white;
     color: black;
@@ -413,7 +425,7 @@ table {
     display: inline-block;
     font-size: 16px;
     padding: 31px 28px;
-  
+    margin-bottom: 52px;
     border-radius: 3px;
     vertical-align: top;
     line-height: 22px;
@@ -427,9 +439,7 @@ table {
 .services__item:last-child {
     margin-right: 0px;
 }
-.big-service__description {
-        width: 210px;
-}
+ 
 .services__item h4 {
     font-weight: 400;
     width: 80px;
@@ -466,10 +476,7 @@ table {
 }
 /* Responsive */
 @media only screen and (max-width: 1265px) {
-    .footer-menu__item {
-        padding-left: 10px;
-        padding-right: 0px;
-    }
+    
     .footer-menu__link {
         font-size: 16px;
     }
@@ -477,20 +484,26 @@ table {
         text-align: center;
     }
 }
+@media only screen and (max-width: 1280px) {
+    .fp-tableCell {
+        width: auto;
+    }
+}
+ 
 @media only screen and (max-width: 1175px) {
     .logo {
         width: 200px;
     }
     .big-service {
-        width: auto;
+        width: 955px;
     }
-    .services__block > div {
-        width: 615px;
-        margin: 0 auto;
-    }
+ 
     .big-lease__more {
         padding-left: 15px;
         margin-right: -15px;
+    }
+    .big-service__description {
+        width: 329px;
     }
 }
 @media only screen and (max-width: 1100px) and (min-width: 1071px) {
@@ -498,9 +511,7 @@ table {
         width: 200px;
         padding-left: 10px;
     }
-    .big-lease__more {
-        width: 200px;
-    }
+   
 }
 @media only screen and (max-width: 1070px) {
     .big-slide__title {
@@ -508,17 +519,24 @@ table {
         text-align: center;
         width: 100%;
         margin: 0px;
-        margin-top: 70px;
+        margin-top: 107px;
         box-sizing: border-box;
         padding: 0px 10px;
+        margin-bottom: 74px;
     }
     .big-slide__image {
-        height: 441px;
+        height: 410px;
         width: 100%;
         display: block;
+        margin: 0 auto;
+        margin-bottom: 0px;
+        top: 0px;
+        background-position: 17px 3px;
+            
     }
     .big-slide {
         width: 100%;
+        margin-bottom: -27px;
     }
     .menu__item {
         display: none;
@@ -556,20 +574,44 @@ table {
         position: relative;
         top: 0px;
     }
-    
+    .footer-menu {
+        padding: 0px 32px;
+    }
 }
  
 .big-lease__buy_white {
     background-image: url(../img/big-lease__buy_white.svg);
 }
-@media only screen and (max-width: 850px) {
-    .services__block > div {
-        width: 296px;
+@media only screen and (max-width: 960px) {
+    .big-service {
+        width: 635px;
     }
 }
 @media only screen and (max-width: 835px) {
     .big-lease {
         padding-bottom: 100px;
+    }
+   
+    .big-lease__description {
+        padding-left: 60px;
+        width: 44%;
+        box-sizing: border-box;
+        padding-right: 60px;
+        margin-top: 44px;
+    }
+    .big-lease__more {
+        width: 50%;
+        margin-top: 41px;
+    }
+    .big-lease__link {
+        margin-bottom: 35px;
+    }
+    .big-lease__image {
+        margin-top: 80px;
+    }
+    .lease-footer-menu {
+        padding: 0px 100px;
+        box-sizing: border-box;
     }
 }
 @media only screen and (max-width: 660px) {
@@ -586,6 +628,8 @@ table {
         height: 330px;
         width: 55%;
         margin: 0 auto;
+        top: 0px;
+        background-position: center top;
     }
     
 }
@@ -624,7 +668,16 @@ table {
         font-size: 24px;
         margin-top: 5px;
     }
-    
+    .big-service__description {
+        width: 230px;
+    }
+    .big-service {
+        width: 300px;
+    }
+     .services__item {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 @media only screen and (max-width: 535px) {
     .big-service__description {
@@ -637,6 +690,7 @@ table {
     .big-service__description h2 {
         display: inline-block;
         width: 50%;
+        font-size: 24px;
     }
     .big-lease__more p.big-service__link-block {
         display: inline-block;
@@ -649,10 +703,28 @@ table {
         margin: 0px;
         padding: 0px;
     }
+    .footer-menu {
+        padding: 0px;
+    }
+    .services {
+        text-align: center;
+    }
+    .services__item {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .big-lease__link {
+        font-size: 16px;
+        padding: 4px 15px;
+    }
 }
 @media only screen and (max-width: 370px) {
     .big-lease__more {
-        width: auto;
+        padding: 0px;
+        margin: 0px;
+        margin-top: -6px;
+        padding-right: 21px;
+        box-sizing: border-box;
     }
     .big-lease {
         padding-top: 0px;
@@ -668,5 +740,66 @@ table {
     .lease-footer-menu__item {
         font-size: 16px;
         padding: 0px 8px;
-    } 
+    }
+    .logo {
+        padding-top: 18px;
+    }
+    .logo__image {
+        width: 68px;
+    }
+    .big-slide__title {
+        margin-top: 71px;
+    }
+    .big-slide__image {
+        height: 202px;
+        width: 48%;
+        margin-top: -43px;
+    }
+    .big-slide {
+        margin-bottom: -126px;
+    }
+    .footer-menu__link {
+        height: 41px;
+    }
+    .big-lease__link {
+        padding: 4px 13px;
+        font-size: 17px;
+    }
+    .big-lease__description {
+        padding: 0px;
+        width: 50%;
+        margin: 0px;
+        padding-left: 19px;
+        margin-top: -13px;
+    }
+    .big-lease__footer-menu {
+        padding: 0px 32px;
+        margin-top: -9px;
+    }
+    .services__block {
+        width: 300px;
+    }
+    .services__item {
+        width: 244px;
+        padding: 31px 18px;
+    }
+    .big-service__description h2 {
+        padding-left: 8px;
+        box-sizing: border-box;
+        width: 50%;
+        position: relative;
+        top: -6px;
+    }
+    .big-lease__more p.big-service__link-block {
+        text-align: right;
+        width: 48%;
+        box-sizing: border-box;
+        margin-left: 13px;
+        margin-right: -16px;
+        margin-top: 6px;
+    }
+    .big-lease__more {
+        margin-bottom: -9px;
+    }
 }
+ 

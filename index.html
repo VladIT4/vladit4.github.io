@@ -247,7 +247,8 @@
         });
         $.fn.fullpage.setMouseWheelScrolling(true);
         $.fn.fullpage.setAllowScrolling(true);
-        var slider = $('.services').bxSlider({
+        if (window.window.outerWidth < 400) {
+            var slider = $('.services').bxSlider({
                 pager: true,
                 slideWidth: 295,
                 minSlides: 1,
@@ -257,6 +258,8 @@
                 controls: false,
                 infiniteLoop: false
             });
+        }
+       
         jQuery(window).resize(function () {
             if (jQuery(window).width() > 1070) {
                 jQuery('.big-slide').css('height',
@@ -266,12 +269,13 @@
                 jQuery('.big-slide').css('height', 'auto');
             }
             $.fn.fullpage.reBuild();
-            slider.reloadSlider();
+            //slider.reloadSlider();
         }).resize();
+        
         $('.big-lease__image ul').bxSlider({
-            pager: false,
-            slideWidth: 504
-        });
+                pager: false,
+                slideWidth: 504
+            });
         jQuery(window).resize();
         
     </script>

@@ -133,11 +133,21 @@
                 </div>
                 <div class="big-lease__more">
                     <p><a href="#" class="big-lease__link">Подробнее</a></p>
-                    <p>Reneka R80</p>
-                    <p>от <span class="big-lease__price">10 000 &#8399;</span> в мес.</p>
-                    <p>&nbsp;</p>
-                    <p><a href="#" class="big-lease__buy">Заказать</a></p>
+                    <div class="big-lease__price-block">
+                        <p>Reneka R80</p>
+                        <p>от <span class="big-lease__price">10 000 &#8399;</span> в мес.</p>
+                        <p>&nbsp;</p>
+                        <p><a href="#" class="big-lease__buy">Заказать</a></p>
+                    </div>
                 </div>
+                <script>
+                    if(jQuery('.big-lease__price-block-mobile').length == 0) {
+                        jQuery('.big-lease').append(
+                            jQuery('.big-lease .big-lease__price-block').clone().addClass('big-lease__price-block-mobile')
+                        );
+                    }
+                 
+                </script>
             </div>
             <div class="lease-footer-menu">
                 <ul>
@@ -247,18 +257,8 @@
         });
         $.fn.fullpage.setMouseWheelScrolling(true);
         $.fn.fullpage.setAllowScrolling(true);
-        if (window.window.outerWidth < 400) {
-            var slider = $('.services').bxSlider({
-                pager: true,
-                slideWidth: 295,
-                minSlides: 1,
-                maxSlides: 3,
-                slideMargin: 10,
-                slideSelector: '.services__item',
-                controls: false,
-                infiniteLoop: false
-            });
-        }
+        var slider;
+        
        
         jQuery(window).resize(function () {
             if (jQuery(window).width() > 1070) {
@@ -269,6 +269,24 @@
                 jQuery('.big-slide').css('height', 'auto');
             }
             $.fn.fullpage.reBuild();
+            if (window.window.outerWidth < 400) {
+                if(!slider) {
+                    slider = $('.services').bxSlider({
+                        pager: true,
+                        slideWidth: 295,
+                        minSlides: 1,
+                        maxSlides: 3,
+                        slideMargin: 10,
+                        slideSelector: '.services__item',
+                        controls: false,
+                        infiniteLoop: false
+                    });
+                }
+            }
+            else if(slider && 'destroySlider' in slider){
+                slider.destroySlider()
+                slider = undefined;
+            }
             //slider.reloadSlider();
         }).resize();
         

@@ -360,6 +360,9 @@ table {
     font-size: 28px;
     font-weight: 700;
 }
+.big-lease__price-block-mobile {
+    display: none;
+}
 .big-lease__buy {
     background: url(../img/big-lease__buy.svg) no-repeat right center;
     padding-right: 27px;
@@ -649,22 +652,7 @@ table {
     .footer-menu__link span {
         margin-top: 10px;
     }
-    .big-lease__description {
-        width: auto;
-    }
-    .big-lease__description p {
-        display: none;
-    }
-    .big-lease__more p {
-        display: none;
-    }
-    .big-service__description p {
-        display: block;
-    }
-    .big-lease__more p:first-child {
-        display: block;
-        text-align: right;
-    }
+    
     .big-lease h2 {
         font-size: 24px;
         margin-top: 5px;
@@ -678,6 +666,13 @@ table {
      .services__item {
         margin-left: 0px;
         margin-right: 0px;
+    }
+}
+@media only screen and (max-width: 660px) {
+    .big-lease__description {
+        padding-left: 44px;
+        width: 40%;
+        padding-right: 64px;
     }
 }
 @media only screen and (max-width: 535px) {
@@ -720,6 +715,20 @@ table {
     }
 }
 @media only screen and (max-width: 370px) {
+    .big-lease__description {
+        width: auto;
+    }
+    .big-lease__description p {
+        display: none;
+    }
+    .big-lease__more p {
+        display: none;
+    }
+   
+    .big-lease__more > p:first-child {
+        display: block;
+        text-align: right;
+    }
     .big-lease__more {
         padding: 0px;
         margin: 0px;
@@ -801,6 +810,11 @@ table {
     }
     .big-lease__more {
         margin-bottom: -9px;
+    }
+    .big-lease__price-block-mobile {
+        display: block;
+        text-align: center;
+        order: 4;
     }
 }
  

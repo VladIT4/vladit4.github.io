@@ -4,7 +4,7 @@
 ===================================*/
 .bx-wrapper {
   position: relative;
-  margin-bottom: 60px;
+
   padding: 0;
   *zoom: 1;
   -ms-touch-action: pan-y;
@@ -54,17 +54,21 @@ ul.bxslider {
   transform: rotate(180deg);
 }
 .bx-wrapper .bx-prev:hover,
-.bx-wrapper .bx-prev:focus {
-  opacity: 0.1;
+.bx-wrapper .bx-next:hover {
+  opacity: 0.2;
 }
+.bx-wrapper .bx-prev.disabled,
+.bx-wrapper .bx-next.disabled  {
+  opacity: 0.1;
+  cursor: default;
+}
+ 
 .bx-wrapper .bx-next {
   right: -76px;
   background: url('../img/slider-arrow.svg') no-repeat center center;
 }
-.bx-wrapper .bx-next:hover,
-.bx-wrapper .bx-next:focus {
-  opacity: 0.1;
-}
+
+
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
   top: 50%;

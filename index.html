@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
@@ -141,9 +142,9 @@
                     </div>
                 </div>
                 <script>
-                    if(jQuery('.big-lease__price-block-mobile').length == 0) {
-                        jQuery('.big-lease').append(
-                            jQuery('.big-lease .big-lease__price-block').clone().addClass('big-lease__price-block-mobile')
+                    if(jQuery('.scroll-block__page_lease .big-lease__price-block-mobile').length == 0) {
+                        jQuery('.scroll-block__page_lease .big-lease').append(
+                            jQuery('.scroll-block__page_lease .big-lease .big-lease__price-block').clone().addClass('big-lease__price-block-mobile')
                         );
                     }
                  
@@ -243,22 +244,197 @@
                 </div>
             </div>
         </div>
+        <div class="scroll-block__page scroll-block__page_product">
+            <div class="header">
+                <div class="logo">
+                    <a class="logo__link" href="/">
+                        <img src="./img/logo__image_black.svg" alt="" class="logo__image">
+                    </a>
+                    <div class="logo__contacts">
+                        <p>8 (812) 715-39-00</p>
+                        <p>
+                            <a href="mailto:info@kofes.ru" class="logo__mail-link">info@kofes.ru</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="menu__item menu__item_in-mobile"><a class="menu__link" href="/catalog">Каталог</a></div>
+                    <div class="menu__item"><a class="menu__link" href="/">Доставка и оплата</a></div>
+                    <div class="menu__item"><a class="menu__link" href="/">Обучение</a></div>
+                    <div class="menu__item menu__item_in-mobile"><a class="menu__link" href="/">Контакты</a></div>
+                    <div class="menu__item menu__item_active menu__item_in-mobile"><a class="menu__link" href="/">Обратный звонок</a></div>
+                </div>
+                <div class="search">
+
+                </div>
+                <div class="mobile-menu"></div>
+            </div>
+            <div class="big-lease">
+                <div class="big-lease__description">
+                    <h2>Кофемашины</h2>
+                    <p>Мы предлагаем в пользование профессиональные рожковые кофемашины известных европейских производителей.</p>
+                    <p>&nbsp;</p>
+                    <p>
+                        <img src="./img/coffe_man1.png" alt="">
+                        <img src="./img/coffe_man2.png" alt="">
+                        <img src="./img/coffe_man3.png" alt="">
+                        <img src="./img/coffe_man4.png" alt="">
+                        <img src="./img/coffe_man7.png" alt="">
+                        <img src="./img/coffe_man6.png" alt="">
+                        <img src="./img/coffe_man5.png" alt="">
+                    </p>
+                </div>
+                
+                <div class="big-lease__image">
+                    <div>
+                         <img src="./img/product1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="big-lease__more">
+                    <p><a href="#" class="big-lease__link">Перейти в каталог</a></p>
+                    <div class="big-lease__price-block">
+                        <p>Saeco Lirika Plus</p>
+                        <p><span class="big-lease__price">36 000 &#8399;</span></p>
+                        <p>&nbsp;</p>
+                        <p><a href="#" class="big-lease__buy">Заказать</a></p>
+                    </div>
+                </div>
+                <div class="big-lease-products__slider">
+                    <ul>
+                        <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-26.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-27.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-28.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-29.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-30.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-31.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-32.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-33.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-34.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-26.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-28.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-29.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-30.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-31.png" alt=""></a></li>
+                        <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-32.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <script>
+                    if (jQuery('.scroll-block__page_product .big-lease__price-block-mobile').length == 0) {
+                        jQuery('.scroll-block__page_product .big-lease').append(
+                            jQuery('.scroll-block__page_product .big-lease .big-lease__price-block').clone().addClass('big-lease__price-block-mobile')
+                        );
+                    }
+                </script>
+            </div>
+            
+            </div>
+            <div class="scroll-block__page scroll-block__page_product">
+                <div class="header">
+                    <div class="logo">
+                        <a class="logo__link" href="/">
+                        <img src="./img/logo__image_black.svg" alt="" class="logo__image">
+                    </a>
+                        <div class="logo__contacts">
+                            <p>8 (812) 715-39-00</p>
+                            <p>
+                                <a href="mailto:info@kofes.ru" class="logo__mail-link">info@kofes.ru</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="menu">
+                        <div class="menu__item menu__item_in-mobile"><a class="menu__link" href="/catalog">Каталог</a></div>
+                        <div class="menu__item"><a class="menu__link" href="/">Доставка и оплата</a></div>
+                        <div class="menu__item"><a class="menu__link" href="/">Обучение</a></div>
+                        <div class="menu__item menu__item_in-mobile"><a class="menu__link" href="/">Контакты</a></div>
+                        <div class="menu__item menu__item_active menu__item_in-mobile"><a class="menu__link" href="/">Обратный звонок</a></div>
+                    </div>
+                    <div class="search">
+
+                    </div>
+                    <div class="mobile-menu"></div>
+                </div>
+                <div class="big-lease">
+                    <div class="big-lease__description">
+                        <h2>Кофе</h2>
+                        <p>Мы предлагаем в пользование профессиональные рожковые кофемашины известных европейских производителей.</p>
+                        <p>&nbsp;</p>
+                        <p>
+                            <img src="./img/coffe_man8.png" alt="">
+                            <img src="./img/coffe_man9.png" alt="">
+                            <img src="./img/coffe_man10.png" alt="">
+                        </p>
+                    </div>
+
+                    <div class="big-lease__image">
+                        <div>
+                            <img src="./img/product1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="big-lease__more">
+                        <p><a href="#" class="big-lease__link">Перейти в каталог</a></p>
+                        <div class="big-lease__price-block">
+                            <p>Qualitа Verde Bar</p>
+                            <p><span class="big-lease__price">1 140 &#8399;</span></p>
+                            <p>&nbsp;</p>
+                            <p><a href="#" class="big-lease__buy">Заказать</a></p>
+                        </div>
+                    </div>
+                    <div class="big-lease-products__slider">
+                        <ul>
+                            <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-26.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-27.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-28.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-29.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-30.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-31.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-32.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-33.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-34.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-26.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-28.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-29.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-30.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/222.png"><img src="./img/layer-31.png" alt=""></a></li>
+                            <li class="big-lease-products__item"><a href="./img/product1.jpg"><img src="./img/layer-32.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <script>
+                        if (jQuery('.scroll-block__page_product .big-lease__price-block-mobile').length == 0) {
+                            jQuery('.scroll-block__page_product .big-lease').append(
+                                jQuery('.scroll-block__page_product .big-lease .big-lease__price-block').clone().addClass('big-lease__price-block-mobile')
+                            );
+                        }
+                    </script>
+                </div>
+
+            </div>
     </div>
     <script>
         $('.scroll-block').fullpage({
-            anchors: ['main', 'lease', 'service'],
+            anchors: ['main', 'lease', 'service', 'product1'],
             scrollOverflow: true,
             sectionSelector: '.scroll-block__page',
             scrollOverflowReset: true,
             scrollOverflowOptions: {
                 mouseWheel: true,
                 scrollbars: true
-            }
+            },
+            verticalCentered: true
         });
         $.fn.fullpage.setMouseWheelScrolling(true);
         $.fn.fullpage.setAllowScrolling(true);
         var slider;
-        
+        var products_slider = $('.big-lease-products__slider ul').bxSlider({
+                minSlides: 1,
+                maxSlides: 10,
+                slideWidth: 98,
+                slideMargin: 10,
+                infiniteLoop: false,
+                pager: false,
+                hideControlOnEnd: true
+            });
        
         jQuery(window).resize(function () {
             if (jQuery(window).width() > 1070) {
@@ -281,21 +457,54 @@
                         controls: false,
                         infiniteLoop: false
                     });
+                    // products_slider.reloadSlider({
+                    //         minSlides: 1,
+                    //         maxSlides: 1,
+                    //         slideWidth: 150,
+                    //         slideMargin: 0,
+                    //         infiniteLoop: false,
+                    //         pager: false,
+                    //         hideControlOnEnd: true
+                    //     });
                 }
             }
             else if(slider && 'destroySlider' in slider){
                 slider.destroySlider()
                 slider = undefined;
             }
-            //slider.reloadSlider();
+            if(window.window.outerWidth > 1170) {
+                setTimeout(function () {
+                    jQuery('.scroll-block__page_lease .big-lease').css('margin-top', jQuery('.scroll-block__page_lease  .fp-tableCell').height() / 2 - jQuery('.scroll-block__page_lease .header').height() - jQuery('.scroll-block__page_lease .big-lease').height() / 2)
+                    jQuery('.big-service').css('margin-top', jQuery('.scroll-block__page_service  .fp-tableCell').height() / 2 - jQuery('.scroll-block__page_service .header').height() - jQuery('.scroll-block__page_service .big-service').height() / 2 + 50)
+                }, 400);
+            }
+            
         }).resize();
         
         $('.big-lease__image ul').bxSlider({
                 pager: false,
-                slideWidth: 504
+                slideWidth: 504,
+                infiniteLoop: false,
+                hideControlOnEnd: true
             });
+       
         jQuery(window).resize();
-        
+        jQuery('.big-lease-products__item a').click(function () {
+                
+                if(jQuery(this).hasClass('active')) {
+                    return false;
+                }
+                var $img_block = jQuery(this).closest('.big-lease').find('.big-lease__image');
+                var img = jQuery(this).attr('href');
+                jQuery('.big-lease-products__item a').removeClass('active');
+                jQuery(this).addClass('active');
+                $img_block .animate({ 'opacity': '0' }, function () {
+                        $img_block.find('img').attr('src', img);
+                        $img_block.animate({ 'opacity': '1' })
+                    })
+                return false;
+            });
+        jQuery('.big-lease-products__item a').eq(0).click();
     </script>
 </body>
 

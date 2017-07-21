@@ -139,6 +139,7 @@ table {
 .fp-tableCell {
     width: 1280px;
     margin: 0 auto;
+ 
 }
 /* Header */
 .scroll-block__page_main {
@@ -323,12 +324,16 @@ table {
     font-size: 18px;
     line-height: 24px;
 }
-.big-lease__description {
+.scroll-block__page_product .big-lease__description {
     display: inline-block;
     width: 250px;
     vertical-align: top;
     margin-top: 54px;
+    text-align: left;
     padding-left: 66px;
+}
+.big-lease__more {
+    text-align: left;
 }
 .big-lease__image {
     display: inline-block;
@@ -378,14 +383,17 @@ table {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     line-height: 20px;
 }
+.big-lease__buy:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
 .big-lease__buy:hover, .big-lease__buy:active {
     text-decoration: none;
 }
 .lease-footer-menu {
     text-align: center;
     position: absolute;
-    bottom: 21px;
-    width: 100%;
+    bottom: 20px;
+    width: 1280px;
     line-height: 30px;
 }
 .big-lease__buy:before {
@@ -453,10 +461,10 @@ table {
     display: inline-block;
     font-size: 16px;
     padding: 31px 28px;
-    margin-bottom: 52px;
     border-radius: 3px;
     vertical-align: top;
     line-height: 22px;
+    text-align: left;
 }
 .services__block > div {
     position: relative;
@@ -502,6 +510,9 @@ table {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     line-height: 20px;
 }
+.services__more:hover {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
 .services__more:active, .services__more:hover {
     text-decoration: none;
 }
@@ -509,6 +520,65 @@ table {
     font-size: 18px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     text-decoration: none;
+}
+.services__item .big-lease__buy:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.scroll-block__page_product .big-lease__description {
+    width: 355px;
+}
+.scroll-block__page_product .big-lease__image {
+    margin: 0px;
+    height: 440px;
+    text-align: center;
+}
+.big-lease__description img {
+    margin: 10px 5px;
+}
+.scroll-block__page_product .big-lease {
+    display: block;
+    text-align: center;
+}
+
+.big-lease-products__item a.active img {
+    opacity: 0.7
+}
+.scroll-block__page_product .big-lease__image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.big-lease-products__item {
+    display: inline-block;
+    width: 98px;
+    text-align: center;
+    padding: 0px 7px;
+}
+.big-lease-products__slider ul {
+    padding: 0px 60px;
+}
+.big-lease-products__slider {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: 35px;
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    box-sizing: border-box;
+    margin-top: 25px;
+}
+.big-lease-products__slider .bx-wrapper {
+    margin: 0 auto;
+}
+.big-lease__description {
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+    margin-top: 54px;
+    padding-left: 66px;
+}
+.big-lease-products__slider .big-lease-products__item img {
+    display: inline-block;
 }
 /* Responsive */
 @media only screen and (max-width: 1265px) {
@@ -520,6 +590,15 @@ table {
 @media only screen and (max-width: 1280px) {
     .fp-tableCell {
         width: auto;
+    }
+    .lease-footer-menu {
+        width: 100%;
+    }
+    .big-lease, .big-service {
+         margin: 0 auto!important;
+    }
+    .big-lease {
+        width: 100%;
     }
 }
  
@@ -537,6 +616,14 @@ table {
     }
     .big-service__description {
         width: 329px;
+    }
+    .services__item {
+        margin-bottom: 52px;
+    }
+    .scroll-block__page_product .big-lease__description {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: left;
     }
 }
 @media only screen and (max-width: 1100px) and (min-width: 1071px) {
@@ -556,6 +643,9 @@ table {
         box-sizing: border-box;
         padding: 0px 10px;
         margin-bottom: 74px;
+    }
+    .bx-wrapper { 
+        margin-bottom: 60px;
     }
     .big-slide__image {
         height: 410px;
@@ -873,5 +963,87 @@ table {
     .big-service__description.big-lease__more {
         width: 100%;
     }
+    .scroll-block__page_product .big-lease__image {
+        display: none;
+    }
+    .scroll-block__page_product .big-lease__description {
+        display: inline-block;
+        width: 50%;
+        padding: 0px;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    .scroll-block__page_product .big-lease__description h2 {
+        line-height: 30px;
+    }
+    .scroll-block__page_product a.big-lease__link {
+        border: none;
+        font-size: 0px;
+    }
+    .scroll-block__page_product a.big-lease__link:before {
+        content: 'Каталог';
+        font-size: 20px;
+        font-weight: 500;
+        border: 1px solid #000000;
+        padding: 7px 15px;
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        margin-bottom: 34px;
+    }
+    .scroll-block__page_product .big-lease__more {
+        padding-right: 0px;
+    }
 }
  
+@media only screen and (max-width: 1230px) {
+    .big-lease-products__slider {
+        width: 1110px;
+    }
+}
+@media only screen and (max-width: 1120px) {
+    .big-lease-products__slider {
+        width: 995px;
+    }
+}
+@media only screen and (max-width: 1020px) {
+    .big-lease-products__slider {
+        width: 870px;
+    }
+}
+@media only screen and (max-width: 870px) {
+    .big-lease-products__slider {
+        width: 792px;
+    }
+}
+@media only screen and (max-width: 870px) {
+    .big-lease-products__slider {
+        width: 792px;
+    }
+}
+@media only screen and (max-width: 795px) {
+    .big-lease-products__slider {
+        width: 670px;
+    }
+}
+@media only screen and (max-width: 675px) {
+    .big-lease-products__slider {
+        width: 580px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .big-lease-products__slider {
+        width: 580px;
+    }
+}
+@media only screen and (max-width: 475px) {
+    .big-lease-products__slider {
+        width: 370px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .big-lease-products__slider {
+        width: 260px;
+        margin-bottom: 23px;
+    }
+}

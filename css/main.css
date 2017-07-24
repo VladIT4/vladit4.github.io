@@ -580,6 +580,27 @@ table {
 .big-lease-products__slider .big-lease-products__item img {
     display: inline-block;
 }
+.list-url__item {
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 25px;
+    line-height: 30px;
+}
+.list-url__item:hover {
+    color: #e8bb90;
+}
+.list-url__item  a {
+    text-decoration: none;
+}
+.big-lease__description-item, .big-lease__more-item {
+    opacity: 0;
+    display: none;
+}
+.big-lease__description-item_active, .big-lease__more-item_active {
+    opacity: 1;
+    display: block;
+}
 /* Responsive */
 @media only screen and (max-width: 1265px) {
 

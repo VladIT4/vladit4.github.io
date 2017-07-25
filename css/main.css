@@ -593,13 +593,34 @@ table {
 .list-url__item  a {
     text-decoration: none;
 }
-.big-lease__description-item, .big-lease__more-item {
+.big-lease__description-item, .big-lease__more-item, .product-description__item, .big-lease-more__item {
     opacity: 0;
     display: none;
 }
-.big-lease__description-item_active, .big-lease__more-item_active {
+.big-lease__description-item_active, .big-lease__more-item_active, .product-description__item_active, .big-lease-more__item_active {
     opacity: 1;
     display: block;
+}
+
+
+.callback-block__shadow {
+    background: black;
+    opacity: 0.7;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.callback-block {
+    width: 415px;
+    padding: 60px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -207px;
+    z-index: 10;
+    background: white;
 }
 /* Responsive */
 @media only screen and (max-width: 1265px) {

@@ -326,11 +326,11 @@ table {
 }
 .scroll-block__page_product .big-lease__description {
     display: inline-block;
-    width: 250px;
     vertical-align: top;
     margin-top: 54px;
     text-align: left;
-    padding-left: 66px;
+    padding-left: 0px;
+    width: 375px;
 }
 .big-lease__more {
     text-align: left;
@@ -380,10 +380,18 @@ table {
     display: inline-block;
     margin-right: 27px;
     position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     line-height: 20px;
 }
 .big-lease__buy:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.scroll-block__page_white .big-lease__buy {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.scroll-block__page_white .big-lease__buy:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 .big-lease__buy:hover, .big-lease__buy:active {
@@ -524,12 +532,10 @@ table {
 .services__item .big-lease__buy:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
-.scroll-block__page_product .big-lease__description {
-    width: 355px;
-}
+ 
 .scroll-block__page_product .big-lease__image {
     margin: 0px;
-    height: 440px;
+    /*height: 440px;*/
     text-align: center;
 }
 .big-lease__description img {
@@ -552,6 +558,9 @@ table {
     width: 98px;
     text-align: center;
     padding: 0px 7px;
+        vertical-align: middle;
+    display: inline-block;
+    float: none !important;
 }
 .big-lease-products__slider ul {
     padding: 0px 60px;
@@ -666,6 +675,7 @@ table {
         width: 100%;
         margin-bottom: 20px;
         text-align: left;
+        padding-left: 66px;
     }
 }
 @media only screen and (max-width: 1100px) and (min-width: 1071px) {
@@ -880,13 +890,16 @@ table {
     .big-lease__description {
         width: auto;
     }
-    .big-lease__description p {
+    .big-lease__description div * {
         display: none;
     }
-    .big-lease__more p {
-        display: none;
+    .big-lease__description h2 {
+        display: block;
     }
-   
+    
+    .big-lease-products__item a.active img {
+        opacity: 1;
+    }
     .big-lease__more > p:first-child {
         display: block;
         text-align: right;
@@ -1036,6 +1049,26 @@ table {
     .scroll-block__page_product .big-lease__more {
         padding-right: 0px;
     }
+    .bx-pager {
+        visibility: hidden
+    }
+    .bx-wrapper img {
+        display: block;    
+    }
+    .big-lease-products__slider .big-lease-products__item img {
+        display: inline-block;
+        min-width: 150px;
+    }
+    .big-lease__price-block {
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        left: 0px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
 }
  
 @media only screen and (max-width: 1230px) {
@@ -1086,6 +1119,8 @@ table {
 @media only screen and (max-width: 360px) {
     .big-lease-products__slider {
         width: 260px;
+        margin-bottom: 23px;
+        width: 100%;
         margin-bottom: 23px;
     }
 }

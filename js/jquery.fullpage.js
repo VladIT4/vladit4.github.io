@@ -1403,7 +1403,10 @@
         */
         function scrollPage(element, callback, isMovementUp){
             if(typeof element === 'undefined'){ return; } //there's no element to scroll, leaving the function
-
+            if (jQuery('#mobile-menu-block').is(':visible'))
+            {
+                return;
+            }
             var dtop = getDestinationPosition(element);
             var slideAnchorLink;
             var slideIndex;

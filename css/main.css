@@ -147,10 +147,12 @@ table {
     width: 100%;
     height: 100%;
 }
+.header {
+    position: relative;
+}
 .scroll-block__page_white .header {
     color: white;
     font-size: 20px;
-   
 }
 .scroll-block__page_main .header {
      height: 75px;
@@ -610,8 +612,22 @@ table {
     opacity: 1;
     display: block;
 }
-
-
+.search__button {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(../img/search-black.svg);
+    margin: 27px;
+}
+.scroll-block__page_white .search__button {
+    background: url(../img/search.svg);
+}
+.search {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 0px;
+}
 .callback-block__shadow {
     background: black;
     opacity: 0.7;
@@ -630,6 +646,57 @@ table {
     margin-left: -207px;
     z-index: 10;
     background: white;
+}
+.mobile-menu {
+    display: none;
+    vertical-align: top;
+    position: absolute;
+    right: 0px;
+}
+.mobile-menu__button {
+    background: url(../img/mobile-menu.svg);
+    width: 24px;
+    height: 17px;
+    display: inline-block;
+    margin: 29px;
+} 
+.mobile-menu-block {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+.mobile-menu-block.opened {
+    display: block;
+}
+.mobile-menu-block_outer {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.mobile-menu-block_inner {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    vertical-align: middle;
+}
+.mobile-menu-block ul {
+    width: 80%;
+    color: white;
+    margin: auto;
+}
+.mobile-menu-block li.menu__item {
+    display: block;
+    padding: 18px;
+}
+.mobile-menu-block .menu__item_active .menu__link, .mobile-menu-block .menu__link:hover {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+    text-decoration: none;
 }
 /* Responsive */
 @media only screen and (max-width: 1265px) {
@@ -787,7 +854,7 @@ table {
         box-sizing: border-box;
     }
 }
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 697px) {
     .menu, .logo__contacts {
         display: none;
     }
@@ -807,6 +874,29 @@ table {
         
     .footer-menu__link {
         font-size: 16px;
+    }
+    .search {
+        display: none;
+    }
+    .mobile-menu {
+        display: inline-block;
+    }
+    /* Ganburger icon animation */
+    .mobile-menu__button {
+        width: 24px;
+        height: 17px;
+        border: none;
+        background: transparent url(../img/mobile-menu.svg);
+    }
+    .mobile-menu__close-button {
+        width: 20px;
+        height: 19px;
+        border: none;
+        background: transparent url(../img/mobile-menu-close.svg);
+        position: absolute;
+        right: 31px;
+        top: 27px;
+        outline: none;
     }
 }
 @media only screen and (max-width: 660px) {
@@ -1068,6 +1158,9 @@ table {
         padding: 20px;
         box-sizing: border-box;
         text-align: center;
+    }
+    .big-lease-products__slider {
+        margin-top: 0px;
     }
 }
  

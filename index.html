@@ -859,8 +859,8 @@
         $.fn.fullpage.setAllowScrolling(true);
         var slider;
         var products_slider = [];
-        $('.big-lease-products__slider ul').each(function () {
-            products_slider.push($(this).bxSlider({
+        var products_slider_params = {
+            'computer': {
                 minSlides: 1,
                 maxSlides: 10,
                 slideWidth: 98,
@@ -868,7 +868,17 @@
                 infiniteLoop: false,
                 pager: false,
                 hideControlOnEnd: true
-            }));
+            },
+            'mobile': {
+                    minSlides: 1,
+                    maxSlides: 1,
+                    slideWidth: 160,
+                    onSlideNext: emulation_click,
+                    onSlidePrev: emulation_click
+                }
+        }
+        $('.big-lease-products__slider ul').each(function () {
+            products_slider.push($(this).bxSlider(window.window.outerWidth > 400 ? products_slider_params['computer'] : products_slider_params['mobile']));
         });
         function emulation_click($slideElement, oldIndex, newIndex) {
             $slideElement.find('a').click();
@@ -897,13 +907,7 @@
                     });
                     $.each(products_slider, function (ind, $el) {
 
-                        $el.reloadSlider({
-                            minSlides: 1,
-                            maxSlides: 1,
-                            slideWidth: 160,
-                            onSlideNext: emulation_click,
-                            onSlidePrev: emulation_click
-                        });
+                        $el.reloadSlider(products_slider_params['mobile']);
                     });
 
                 }
@@ -914,17 +918,7 @@
 
                 $.each(products_slider, function (ind, $el) {
 
-                    $el.reloadSlider({
-                        minSlides: 1,
-                        maxSlides: 10,
-                        slideWidth: 98,
-                        slideMargin: 10,
-                        infiniteLoop: false,
-                        pager: false,
-                        hideControlOnEnd: true,
-                        onSlideNext: function () { return true; },
-                        onSlidePrev: function () { return true; }
-                    });
+                    $el.reloadSlider(products_slider_params['computer']);
                 });
             }
              

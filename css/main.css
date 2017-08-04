@@ -859,7 +859,7 @@ table {
         margin-top: 41px;
     }
     .big-lease__link {
-        margin-bottom: 35px;
+        margin-bottom: 15px;
     }
     .big-lease__image {
         margin-top: 80px;
@@ -1170,7 +1170,7 @@ table {
         bottom: 0px;
         width: 100%;
         left: 0px;
-        padding: 20px;
+        padding: 30px 20px;
         box-sizing: border-box;
         text-align: center;
     }

@@ -534,10 +534,12 @@ table {
 .services__item .big-lease__buy:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
- 
+.big-lease__description .product-description__item {
+    height: 300px;
+}
 .scroll-block__page_product .big-lease__image {
     margin: 0px;
-    /*height: 440px;*/
+    height: 440px;
     text-align: center;
 }
 .big-lease__description img {
@@ -611,6 +613,14 @@ table {
 .big-lease__description-item_active, .big-lease__more-item_active, .product-description__item_active, .big-lease-more__item_active {
     opacity: 1;
     display: block;
+}
+.scroll-block__page_lease .big-lease__price-block {
+    opacity: 0;
+    display: none;
+}
+.scroll-block__page_lease .big-lease__price-block_active {
+    display: block;
+    opacity: 1;
 }
 .search__button {
     width: 20px;
@@ -712,11 +722,10 @@ table {
     .lease-footer-menu {
         width: 100%;
     }
-    .big-lease, .big-service {
-         margin: 0 auto!important;
-    }
+   
     .big-lease {
         width: 100%;
+        position: relative;
     }
 }
  
@@ -743,6 +752,12 @@ table {
         margin-bottom: 20px;
         text-align: left;
         padding-left: 66px;
+    }
+    .big-lease__description .product-description__item {
+        height: auto;
+    }
+    .scroll-block__page_product .big-lease__image {
+        height: 400px;
     }
 }
 @media only screen and (max-width: 1100px) and (min-width: 1071px) {
@@ -1139,7 +1154,7 @@ table {
     .scroll-block__page_product .big-lease__more {
         padding-right: 0px;
     }
-    .bx-pager {
+    .big-lease-products__slider .bx-pager {
         visibility: hidden
     }
     .bx-wrapper img {
@@ -1147,7 +1162,7 @@ table {
     }
     .big-lease-products__slider .big-lease-products__item img {
         display: inline-block;
-        min-width: 150px;
+        min-width: 130px;
     }
     .big-lease__price-block {
         display: block;
@@ -1162,6 +1177,7 @@ table {
     .big-lease-products__slider {
         margin-top: 0px;
     }
+    
 }
  
 @media only screen and (max-width: 1230px) {

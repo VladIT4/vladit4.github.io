@@ -133,40 +133,34 @@
                         <li class="lease-footer-menu__item lease-footer-menu__item_active"><a href="#">Рожковые</a></li>
                         <li class="lease-footer-menu__item"><a href="#">Суперавтоматы</a></li>
                         <li class="lease-footer-menu__item"><a href="#">Автоматы</a></li>
-                        <li class="lease-footer-menu__item"><a href="#">Выездной бариста</a></li>
+                        <li class="lease-footer-menu__item"><a href="#">Бариста</a></li>
                         <li class="lease-footer-menu__item"><a href="#">Обучение</a></li>
                     </ul>
                 </div>
                 <div class="big-lease__image">
                     <div>
                         <ul>
-                            <li><img src="./img/big-lease__image.png" alt=""></li>
-                            <li><img src="./img/35073.jpg" alt=""></li>
-                            <li><img src="./img/522887093.jpg" alt=""></li>
+                            <li><a href="#" data-content="1"><img src="./img/big-lease__image.png" alt=""></a></li>
+                            <li><a href="#" data-content="2"><img src="./img/35073.jpg" alt=""></a></li>
+                            <li><a href="#" data-content="3"><img src="./img/522887093.jpg" alt=""></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="big-lease__more">
                     <div class="big-lease__more-item big-lease__more-item_active">
                         <p><a href="#" class="big-lease__link">Подробнее</a></p>
-                        <div class="big-lease__price-block">
+                        <div class="big-lease__price-block big-lease__price-block_active">
                             <p>Reneka R80</p>
                             <p>от <span class="big-lease__price">10 000 &#8399;</span> в мес.</p>
                             <p>&nbsp;</p>
                             <p><a href="#" class="big-lease__buy">Заказать</a></p>
                         </div>
-                    </div>
-                    <div class="big-lease__more-item">
-                        <p><a href="#" class="big-lease__link">Подробнее</a></p>
                         <div class="big-lease__price-block">
                             <p>Reneka R90</p>
                             <p>от <span class="big-lease__price">20 000 &#8399;</span> в мес.</p>
                             <p>&nbsp;</p>
                             <p><a href="#" class="big-lease__buy">Заказать</a></p>
                         </div>
-                    </div>
-                    <div class="big-lease__more-item">
-                        <p><a href="#" class="big-lease__link">Подробнее</a></p>
                         <div class="big-lease__price-block">
                             <p>Reneka R120</p>
                             <p>от <span class="big-lease__price">30 000 &#8399;</span> в мес.</p>
@@ -174,6 +168,7 @@
                             <p><a href="#" class="big-lease__buy">Заказать</a></p>
                         </div>
                     </div>
+                    
                 </div>
                 <script>
                     // if(jQuery('.scroll-block__page_lease .big-lease__price-block-mobile').length == 0) {
@@ -530,7 +525,7 @@
                         <p>Мы предлагаем в пользование профессиональные рожковые кофемашины известных европейских производителей.</p>
                         <p>&nbsp;</p>
                         <p>
-                            <img src="./img/coffe_man11.png" alt="">
+                            <img src="./img/coffe_man11.png" alt=""><br>
                             <img src="./img/coffe_man12.png" alt="">
                             <img src="./img/coffe_man13.png" alt="">
                         </p>
@@ -540,7 +535,7 @@
                         <p>Мы предлагаем в пользование профессиональные рожковые кофемашины известных европейских производителей.</p>
                         <p>&nbsp;</p>
                         <p>
-                            <img src="./img/coffe_man11.png" alt="">
+                            <img src="./img/coffe_man11.png" alt=""><br>
                             <img src="./img/coffe_man12.png" alt="">
                             <img src="./img/coffe_man13.png" alt="">
                         </p>
@@ -932,16 +927,23 @@
                     });
                 });
             }
-            if (window.window.outerWidth > 1170) {
+             
                 setTimeout(function () {
-                    jQuery('.scroll-block__page_lease .big-lease').css('margin-top', jQuery('.scroll-block__page_lease  .fp-tableCell').height() / 2 - jQuery('.scroll-block__page_lease .header').height() - jQuery('.scroll-block__page_lease .big-lease').height() / 2)
-                    jQuery('.big-service').css('margin-top', jQuery('.scroll-block__page_service  .fp-tableCell').height() / 2 - jQuery('.scroll-block__page_service .header').height() - jQuery('.scroll-block__page_service .big-service').height() / 2 + 50)
+                    jQuery('.big-lease').each(function() {
+                        jQuery(this).css('margin-top', Math.max(0, jQuery(this).closest('.fp-tableCell').height() / 2 - jQuery(this).closest('.fp-tableCell').find('.header').height() - jQuery(this).height() / 2));
+                    });
+                    jQuery('.big-service').css('margin-top', Math.max(0, jQuery('.scroll-block__page_service  .fp-tableCell').height() / 2 - jQuery('.scroll-block__page_service .header').height() - jQuery('.scroll-block__page_service .big-service').height() / 2 + 50));
                 }, 400);
-            }
-
+           
+            
         }).resize();
         function onChangeSlide($slideElement, oldIndex, newIndex) {
-
+            var $mores = $slideElement.closest('.big-lease').find('.big-lease__price-block');
+           
+            $mores.filter(':visible').stop().animate({ 'opacity': 0 }, 350, function () {
+                $mores.css('display', 'none');
+                $mores.eq(newIndex).show().animate({ 'opacity': 1 }, 350);
+            });
         }
         $('.big-lease__image ul').bxSlider({
             pager: false,
@@ -954,28 +956,25 @@
 
         jQuery(window).resize();
         jQuery('.big-lease').on('click', '.big-lease-products__item a', function () {
-            console.warn('click');
-            if (jQuery(this).hasClass('active')) {
-                return false;
-            }
+             
             var $img_block = jQuery(this).closest('.big-lease').find('.big-lease__image img');
             var img = jQuery(this).attr('href');
             jQuery('.big-lease-products__item a').removeClass('active');
             jQuery(this).addClass('active');
-            $img_block.animate({ 'opacity': '0' }, function () {
+            $img_block.stop().animate({ 'opacity': '0' }, function () {
                 $img_block.attr('src', img);
                 $img_block.animate({ 'opacity': '1' })
             });
             var item = parseInt(jQuery(this).data('content'));
 
             var $descs = jQuery(this).closest('.big-lease').find('.product-description__item');
-            $descs.filter(':visible').animate({ 'opacity': 0 }, 350, function () {
+            $descs.filter(':visible').stop().animate({ 'opacity': 0 }, 350, function () {
                 jQuery(this).css('display', 'none');
                 $descs.eq(item - 1).show().animate({ 'opacity': 1 }, 350);
             });
 
             var $mores = jQuery(this).closest('.big-lease').find('.big-lease-more__item');
-            $mores.filter(':visible').animate({ 'opacity': 0 }, 350, function () {
+            $mores.filter(':visible').stop().animate({ 'opacity': 0 }, 350, function () {
                 jQuery(this).css('display', 'none');
                 $mores.eq(item - 1).show().animate({ 'opacity': 1 }, 350);
             });

@@ -199,7 +199,7 @@
         var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));
         var container = $(this);
         var windowsHeight = $window.height();
-        var isResizing = false;
+        var isResizing = true;
         var isWindowFocused = true;
         var lastScrolledDestiny;
         var lastScrolledSlide;
@@ -1078,12 +1078,13 @@
         * by 'automatically' scrolling a section or by using the default and normal scrolling.
         */
         function scrolling(type, scrollable){
+           
             if (!isScrollAllowed.m[type]){
                 return;
             }
             var check = (type === 'down') ? 'bottom' : 'top';
             var scrollSection = (type === 'down') ? moveSectionDown : moveSectionUp;
-
+            
             if(scrollable.length > 0 ){
                 //is the scrollbar at the start/end of the scroll?
                 if(options.scrollOverflowHandler.isScrolled(check, scrollable)){
@@ -1120,9 +1121,10 @@
         * used one to determine the direction.
         */
         function touchMoveHandler(event){
+            console.warn('move');
             var e = event.originalEvent;
             var activeSection = $(e.target).closest(SECTION_SEL);
-
+           
             // additional: if one of the normalScrollElements isn't within options.normalScrollElementTouchThreshold hops up the DOM chain
             if (!checkParentForNormalScrollElement(event.target) && isReallyTouch(e) ) {
 
@@ -1245,8 +1247,7 @@
             
             var curTime = new Date().getTime();
             var isNormalScroll = $(COMPLETELY_SEL).hasClass(NORMAL_SCROLL);
-
-            //autoscrolling and not zooming?
+           
             if(options.autoScrolling && !controlPressed && !isNormalScroll){
                 // cross-browser wheel delta
                 e = e || window.event;
@@ -2594,6 +2595,7 @@
         * Adds the possibility to auto scroll through sections on touch devices.
         */
         function addTouchHandler(){
+            
             if(isTouchDevice || isTouch){
                 if(options.autoScrolling){
                     $body.off(events.touchmove).on(events.touchmove, preventBouncing);
@@ -3036,12 +3038,13 @@
          */
         isScrolled: function(type, scrollable) {
             var scroller = scrollable.data('iscrollInstance');
-
+            window.ggg2 = scrollable;
             //no scroller?
             if (!scroller) {
+                 
                 return true;
             }
-
+           
             if (type === 'top') {
                  
                 var a = scroller.y >= 0 && !scrollable.scrollTop();
@@ -3062,8 +3065,13 @@
                 
                 var b = scrollable.innerHeight();
                 var c = scrollable[0].scrollHeight;
-                 
-                var a = c <= b;
+
+                var b2 = scrollable.height();
+                var c2 = scrollable.find('> .fp-scroller').css('transform').match(/-?[\d\.]+/g);
+                c2 = c2[c2.length-1];
+                var g2 = scrollable.find('> .fp-scroller').height();
+                var a = g2 + parseInt(c2) <= b2;
+               
                 if (a) {
                     if ('is_ready' in scroller) {
                         if (scroller.is_ready) {

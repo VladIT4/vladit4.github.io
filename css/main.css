@@ -270,7 +270,6 @@ table {
 }
 .footer-menu__icon {
     display: inline-block;
-    background: url(../img/footer-menu.svg);
     width: 30px;
     height: 46px;
 }
@@ -281,30 +280,36 @@ table {
     padding-left: 10px;
 }
 .footer-menu__icon_type_lease {
+    background: url(../img/lease.svg) 0px 11px;
     width: 61px;
+    height: 46px;
 }
 .footer-menu__icon_type_service {
-    background-position-x: -179px;
+    background: url(../img/service.svg) 0px 10px;;
     width: 34px;
 }
 .footer-menu__icon_type_coffee-machines {
-    background-position-x: -333px;
+    background: url(../img/coffee-machines.svg) 0px 5px;
     width: 40px;
 }
 .footer-menu__icon_type_coffee {
-    background-position-x: -549px;
+    background: url(../img/coffee.svg) 0px 6px;
     width: 28px;
 }
 .footer-menu__icon_type_tea {
-    background-position-x: -677px;
+    background: url(../img/tea.svg);
 }
 .footer-menu__icon_type_assortment {
-    background-position-x: -795px;
+    background: url(../img/assortment.svg);
     width: 38px;
 }
 .footer-menu__icon_type_clean {
-    background-position-x: -1003px;
+    background: url(../img/clean.svg);
     width: 25px;
+}
+.footer-menu__icon {
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .menuaaa {
     position: fixed;
@@ -315,6 +320,9 @@ table {
     width: 1280px;
     margin: 0 auto;
     padding-bottom: 80px;
+}
+.scroll-block__page_product .big-lease {
+    padding-bottom: 40px;
 }
 .big-lease h2 {
     font-size: 48px;
@@ -333,6 +341,7 @@ table {
     text-align: left;
     padding-left: 0px;
     width: 375px;
+    box-sizing: border-box;
 }
 .big-lease__more {
     text-align: left;
@@ -439,7 +448,7 @@ table {
  
 .big-service {
     color: white;
-    width: 1180px;
+    width: 1185px;
     margin: 0 auto;
     margin-top: 16px;
 }
@@ -480,7 +489,7 @@ table {
     position: relative;
 }
 .services__item:first-child {
-    margin-left: 0px;
+    margin-left:1px;
 }
 .services__item:last-child {
     margin-right: 0px;
@@ -539,7 +548,6 @@ table {
 }
 .scroll-block__page_product .big-lease__image {
     margin: 0px;
-    height: 440px;
     text-align: center;
 }
 .big-lease__description img {
@@ -578,7 +586,7 @@ table {
     padding-left: 80px;
     padding-right: 80px;
     box-sizing: border-box;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 .big-lease-products__slider .bx-wrapper {
     margin: 0 auto;
@@ -589,6 +597,7 @@ table {
     vertical-align: top;
     margin-top: 54px;
     padding-left: 66px;
+    text-align: left;
 }
 .big-lease-products__slider .big-lease-products__item img {
     display: inline-block;
@@ -708,6 +717,9 @@ table {
     border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
+.big-lease-products__slider .bx-pager {
+    display: none;
+}
 /* Responsive */
 @media only screen and (max-width: 1265px) {
 
@@ -729,23 +741,29 @@ table {
     }
 }
  
-@media only screen and (max-width: 1175px) {
+@media only screen and (max-width: 1180px) {
     .logo {
         width: 200px;
     }
     .big-service {
-        width: 955px;
+        width: 690px;
     }
- 
+    .services__item:last-child {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
     .big-lease__more {
-        padding-left: 15px;
-        margin-right: -15px;
+        padding: 0px 15px;
+        margin-right: 0px;
+        margin: 5px;
     }
     .big-service__description {
-        width: 329px;
+        width: 307px;
     }
     .services__item {
-        margin-bottom: 52px;
+        margin: 0px 23px;
+        margin-right: 25px;
+        margin-bottom: 45px;
     }
     .scroll-block__page_product .big-lease__description {
         width: 100%;
@@ -757,10 +775,13 @@ table {
         height: auto;
     }
     .scroll-block__page_product .big-lease__image {
-        height: 400px;
+        max-height: 400px;
+    }
+    .services__block {
+        padding-bottom: 20px;
     }
 }
-@media only screen and (max-width: 1100px) and (min-width: 1071px) {
+@media only screen and (max-width: 1110px) and (min-width: 1071px) {
     .big-lease__description {
         width: 200px;
         padding-left: 10px;
@@ -810,6 +831,7 @@ table {
     .big-lease__description {
         order: 1;
         width: 300px;
+        margin-top: 16px;
     }
     .big-lease__image {
         order: 3;
@@ -839,30 +861,27 @@ table {
  
 @media only screen and (max-width: 960px) {
     .big-service {
-        width: 635px;
+        width: 695px;
     }
 }
 @media only screen and (max-width: 835px) {
-    .big-lease {
-        padding-bottom: 100px;
+    .scroll-block__page .big-lease {
+        padding-bottom: 60px;
     }
-   
+    
     .big-lease__description {
         padding-left: 60px;
         width: 44%;
         box-sizing: border-box;
         padding-right: 60px;
-        margin-top: 44px;
+        margin-top: 13px;
     }
-    .big-lease__more {
  
-        margin-top: 41px;
-    }
     .big-lease__link {
         margin-bottom: 15px;
     }
     .big-lease__image {
-        margin-top: 80px;
+        margin-top: 40px;
     }
     .lease-footer-menu {
         padding: 0px 100px;
@@ -922,9 +941,28 @@ table {
         font-size: 24px;
     }
     .footer-menu__icon {
-        zoom: 0.64;
-        -moz-transform: scale(0.64);
-        -moz-transform-origin: 0 0;
+        width: 19.2px;
+        height: 33.44px;
+    }
+
+    .footer-menu__icon_type_lease {
+        width: 39px;
+    }
+    .footer-menu__icon_type_service {
+        width: 21.76px;
+    }
+    .footer-menu__icon_type_coffee-machines {
+        width: 25.6px;
+    }
+    .footer-menu__icon_type_coffee {
+        width: 17.92px;
+    }
+   
+    .footer-menu__icon_type_assortment {
+        width: 24.32px;
+    }
+    .footer-menu__icon_type_clean {
+        width: 16px;
     }
     .footer-menu__link span {
         margin-top: 10px;
@@ -956,14 +994,16 @@ table {
     .big-service__description {
         display: block;
         width: 100%;
+        box-sizing: border-box;
     }
      .big-service__description p {
         display: none;
     }
     .big-service__description h2 {
         display: inline-block;
-        width: 50%;
+        width: 55%;
         font-size: 24px;
+        text-align: left;
     }
     .big-lease__more p.big-service__link-block {
         display: inline-block;
@@ -990,6 +1030,18 @@ table {
         font-size: 16px;
         padding: 4px 15px;
     }
+}
+@media only screen and (max-width: 676px) {
+    .big-lease-products__slider {
+        width: 580px;
+    }
+    .scroll-block__page_product  .big-lease__more {
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+@media only screen and (max-width: 540px) {
+  
 }
 @media only screen and (max-width: 370px) {
     .big-lease__description {
@@ -1055,9 +1107,11 @@ table {
     .footer-menu__link {
         height: 41px;
     }
-    .big-lease__link {
+    .big-service__link-block .big-lease__link {
         padding: 4px 13px;
         font-size: 17px;
+        position: relative;
+        right: 18px;
     }
     .big-lease__description {
         padding: 0px;
@@ -1087,6 +1141,9 @@ table {
         width: 50%;
         position: relative;
         top: -6px;
+        text-align: left;
+        padding: 0px;
+        padding-bottom: 25px;
     }
     .big-lease__more p.big-service__link-block {
         text-align: right;
@@ -1122,6 +1179,9 @@ table {
     }
     .big-service__description.big-lease__more {
         width: 100%;
+        text-align: center;
+        padding: 0px;
+        width: 100%;
     }
     .scroll-block__page_product .big-lease__image {
         display: none;
@@ -1153,6 +1213,7 @@ table {
     }
     .scroll-block__page_product .big-lease__more {
         padding-right: 0px;
+        margin-top: 0px;
     }
     .big-lease-products__slider .bx-pager {
         visibility: hidden
@@ -1182,45 +1243,36 @@ table {
  
 @media only screen and (max-width: 1230px) {
     .big-lease-products__slider {
-        width: 1110px;
+        width: 1150px;
     }
 }
 @media only screen and (max-width: 1120px) {
     .big-lease-products__slider {
-        width: 995px;
+        width: 1050px;
     }
 }
 @media only screen and (max-width: 1020px) {
     .big-lease-products__slider {
-        width: 870px;
+        width: 830px;
     }
 }
 @media only screen and (max-width: 870px) {
     .big-lease-products__slider {
-        width: 792px;
+        width: 600px;
     }
 }
-@media only screen and (max-width: 870px) {
+ 
+@media only screen and (max-width: 670px) {
     .big-lease-products__slider {
-        width: 792px;
+        width: 590px;
     }
 }
-@media only screen and (max-width: 795px) {
+@media only screen and (max-width: 600px) {
     .big-lease-products__slider {
-        width: 670px;
+        width: 500px;
     }
 }
-@media only screen and (max-width: 675px) {
-    .big-lease-products__slider {
-        width: 580px;
-    }
-}
-@media only screen and (max-width: 580px) {
-    .big-lease-products__slider {
-        width: 580px;
-    }
-}
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 500px) {
     .big-lease-products__slider {
         width: 370px;
     }
@@ -1230,6 +1282,61 @@ table {
         width: 260px;
         margin-bottom: 23px;
         width: 100%;
-        margin-bottom: 23px;
+        margin-bottom: 80px;
+    }
+}
+ 
+ @media only screen and (max-width: 445px) and (min-width: 370px) {
+    .big-lease__description {
+        padding-left: 44px;
+        width: 100%;
+        padding-right: 20px;
+        margin-top: 0px;
+    }
+     
+    .big-lease__more {
+        text-align: center;
+        padding: 0px;
+        width: 100%;
+    }
+ }
+ @media only screen and (max-width: 835px) {
+    .scroll-block__page.scroll-block__page_lease .big-lease {
+        padding-bottom: 90px;
+    }
+ }
+ @media only screen and (max-width: 540px) {
+    .scroll-block__page.scroll-block__page_lease .big-lease {
+        padding-bottom: 140px;
+    }
+    .lease-footer-menu {
+        padding: 0px 20px;
+    }
+ }
+ @media only screen and (max-width: 660px) {
+    .scroll-block__page_lease .big-lease__description {
+        margin-top: 3px;
+    }
+ }
+@media only screen and (max-width: 1240px) and (min-width: 1071px) {
+    .big-lease__image {
+        margin: 0px 50px;
+        width: 400px;
+    }
+
+    .big-lease__description {
+        padding-left: 50px;
+    }
+    .big-lease {
+        text-align: center;
+        position: relative;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 1180px) and (min-width: 1071px) {
+    .scroll-block__page_lease .big-lease__more {
+        width: 230px;
+        margin-left: 37px;
+        margin-top: 62px;
     }
 }

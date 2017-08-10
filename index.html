@@ -881,7 +881,7 @@
                 }
         }
         $('.big-lease-products__slider ul').each(function () {
-            products_slider.push($(this).bxSlider(window.window.outerWidth > 400 ? products_slider_params['computer'] : products_slider_params['mobile']));
+            products_slider.push($(this).bxSlider(jQuery(window).width() > 400 ? products_slider_params['computer'] : products_slider_params['mobile']));
         });
         function emulation_click($slideElement, oldIndex, newIndex) {
             $slideElement.find('a').click();
@@ -896,7 +896,7 @@
                 jQuery('.big-slide').css('height', 'auto');
             }
             $.fn.fullpage.reBuild();
-            if (window.window.outerWidth < 400) {
+            if (jQuery(window).width() < 400) {
                 if (!slider) {
                     slider = $('.services').bxSlider({
                         pager: true,

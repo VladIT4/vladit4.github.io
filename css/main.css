@@ -1043,11 +1043,11 @@ table {
 @media only screen and (max-width: 540px) {
   
 }
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 371px) {
     .big-lease__description {
         width: auto;
     }
-    .big-lease__description div * {
+    .big-lease__description * {
         display: none;
     }
     .big-lease__description h2 {
@@ -1277,7 +1277,7 @@ table {
         width: 370px;
     }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 371px) {
     .big-lease-products__slider {
         width: 260px;
         margin-bottom: 23px;
@@ -1286,7 +1286,7 @@ table {
     }
 }
  
- @media only screen and (max-width: 445px) and (min-width: 370px) {
+ @media only screen and (max-width: 445px) and (min-width: 371px) {
     .big-lease__description {
         padding-left: 44px;
         width: 100%;

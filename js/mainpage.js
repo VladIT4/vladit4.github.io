@@ -1,11 +1,4 @@
-$('.mobile-menu__button').click(function (e) {
-    setTimeout(function () {
-        $('.mobile-menu-block').fadeIn();
-    }, 100);
-});
-$('.mobile-menu__close-button').click(function (e) {
-    $('.mobile-menu-block').fadeOut();
-})
+ 
 $('.scroll-block').fullpage({
     anchors: ['main', 'lease', 'service', 'coffee-machines', 'coffee', 'tea', 'assortment', 'cleaners'],
     scrollOverflow: true,

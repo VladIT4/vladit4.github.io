@@ -16,6 +16,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="./js/jquery.fullpage.js"></script>
+    <script type="text/javascript" src="./js/jquery.maskedinput.min.js"></script>
     <!-- bxSlider -->
     <script type="text/javascript" src="./js/jquery.bxslider.min.js"></script>
     <!-- bxSlider CSS file -->
@@ -29,7 +30,7 @@
             <div class="scroll-block__page">
                 <div class="header">
                     <div class="logo">
-                        <a class="logo__link" href="#main">
+                        <a class="logo__link" href="/">
                     <img src="./img/logo__image_black.svg" alt="" class="logo__image">
                 </a>
                         <div class="logo__contacts">
@@ -41,14 +42,14 @@
                     </div>
 
                     <div class="menu">
-                        <div class="menu__item menu__item_in-mobile"><a class="menu__link" href="/catalog">Каталог</a></div>
-                        <div class="menu__item"><a class="menu__link" href="/">Доставка и оплата</a></div>
-                        <div class="menu__item"><a class="menu__link" href="/">Обучение</a></div>
-                        <div class="menu__item menu__item_in-mobile"><a class="menu__link" href="/">Контакты</a></div>
-                        <div class="menu__item menu__item_active menu__item_in-mobile"><a class="menu__link" href="/">Обратный звонок</a></div>
+                        <div class="menu__item menu__item_in-mobile"><a class="menu__link" href="/catalog.html">Каталог</a></div>
+                        <div class="menu__item"><a class="menu__link" href="/shipping-payment.html">Доставка и оплата</a></div>
+                        <div class="menu__item"><a class="menu__link" href="/learning.html">Обучение</a></div>
+                        <div class="menu__item menu__item_in-mobile"><a class="menu__link" href="/contacts.html">Контакты</a></div>
+                        <div class="menu__item menu__item_active menu__item_in-mobile"><a class="menu__link callback-click" href="#">Обратный звонок</a></div>
                     </div>
                     <div class="search">
-                        <a href="#search" class="search__button"></a>
+                        <a href="/search-start.html" class="search__button"></a>
                     </div>
                     <div class="mobile-menu">
                         <button class="mobile-menu__button">
@@ -63,7 +64,7 @@
                             <img src="./img/product1.png" alt="" width="667px">
                         </div>
                          <div class="product__info">
-                             <a href="" class="product__back">
+                             <a href="/catalog.html" class="product__back">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12">
                                     <path d="M1 6.4L5.6 11 7 9.6 3.4 6 7 2.4 5.6 1 1 5.6l.4.4z" />
                                 </svg>
@@ -194,21 +195,102 @@
                          </div>
                     </div>
                     </div>
+                    <div class="static-footer">
+                        <div class="static-footer__contacts">
+                            <span class="static-footer__copyright">© kofes.ru</span>
+                            <span class="static-footer__phone">8 (812) 715-39-00</span>
+                            <a href="mailto:info@kofes.ru" class="static-footer__mail">info@kofes.ru</a>
+                        </div>
+                        <div class="static-footer__menu">
+                            <ul>
+                                <li class="static-footer__menu-item"><a href="/catalog.html">Каталог</a></li>
+                                <li class="static-footer__menu-item"><a href="/shipping-payment.html">Доставка и оплата</a></li>
+                                <li class="static-footer__menu-item"><a href="/learning.html">Обучение</a></li>
+                                <li class="static-footer__menu-item"><a href="/contacts.html">Контаткы</a></li>
+                                <li class="static-footer__menu-item"><a href="#" class="callback-click">Обратный звонок</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div id="form_shadow" class="modal-shadow"></div>
+    <div id="callback_form" class="modal-form">
+        <button class="catalog-menu__close-button" style="display: block"></button>
+        <form action="/" id="callback" novalidate class="form">
+            <h2 class="modal-form__title">Обратный звонок</h2>
+            <p>
+                <input type="text" class="contact-form__text" name="name" placeholder="Имя">
+                <span class="errors"></span>
+            </p>
+            <p>
+                <input type="text" class="contact-form__text" name="phone" placeholder="Номер телефона">
+                <span class="errors"></span>
+            </p>
+            <p>
+                <input type="email" class="contact-form__text" name="email" placeholder="Email">
+                <span class="errors"></span>
+            </p>
+            <div class="contact-form__checkeds">
+                <p>
+                    <input type="checkbox" name="send_pricelist" id="send_pricelist" class="checkbox">
+                    <label for="send_pricelist">Выслать прайс лист</label>
+                </p>
+            </div>
+            <div class="contact-form__button">
+                <input type="submit" value="Отправить" class="button">
+            </div>
+        </form>
+    </div>
+    <div id="order_form" class="modal-form">
+        <button class="catalog-menu__close-button" style="display: block"></button>
+        <form action="/" id="callback" novalidate class="form">
+            <h2 class="modal-form__title">Заказ ремонта</h2>
+            <p>
+                <span class="service-name">Ремонт рожковых кофемашин</span>
+                <span class="service-picture">
+                    <img src="./img/service-image.jpg" alt="" width="63px">
+                 </span>
+            </p><br>
+            <p>
+                <select name="mark" class="selectbox" placeholder="марку">
+                    <option value="" style="visibility: hidden;">Марка</option>
+                    <option value="1">Марка 1</option>
+                    <option value="2">Марка 2</option>
+                    <option value="3">Марка 3</option>
+                </select>
+                <span class="errors"></span>
+            </p>
+            <p>
+                <input type="text" class="contact-form__text" name="name" placeholder="Имя">
+                <span class="errors"></span>
+            </p>
+            <p>
+                <input type="text" class="contact-form__text" name="phone" placeholder="Номер телефона">
+                <span class="errors"></span>
+            </p>
+            <p>
+                <input type="email" class="contact-form__text" name="email" placeholder="Email">
+                <span class="errors"></span>
+            </p>
+
+            <div class="contact-form__button">
+                <input type="submit" value="Отправить" class="button">
+            </div>
+        </form>
     </div>
     <div id="mobile-menu-block" class="mobile-menu-block">
         <div class="mobile-menu-block_outer">
             <button class="mobile-menu__close-button"></button>
             <div class="mobile-menu-block_inner">
                 <ul>
-                    <li class="menu__item"><a href="#" class="menu__link">Каталог</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Доставка и оплата</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Обучение</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
-                    <li class="menu__item menu__item menu__item_active"><a href="#" class="menu__link">Обратный звонок</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Поиск</a></li>
+                    <li class="menu__item"><a href="/catalog.html" class="menu__link">Каталог</a></li>
+                    <li class="menu__item"><a href="/shipping-payment.html" class="menu__link">Доставка и оплата</a></li>
+                    <li class="menu__item"><a href="/learning.html" class="menu__link">Обучение</a></li>
+                    <li class="menu__item"><a href="/contacts.html" class="menu__link">Контакты</a></li>
+                    <li class="menu__item menu__item menu__item_active"><a href="#" class="menu__link callback-click">Обратный звонок</a></li>
+                    <li class="menu__item"><a href="/search-start.html" class="menu__link">Поиск</a></li>
                 </ul>
             </div>
         </div>
@@ -255,6 +337,7 @@
         }).resize();
         
     </script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>

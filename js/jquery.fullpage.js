@@ -1121,7 +1121,9 @@
         * used one to determine the direction.
         */
         function touchMoveHandler(event){
-            console.warn('move');
+            if ($('#form_shadow').is(':visible')) {
+                return false;
+            }
             var e = event.originalEvent;
             var activeSection = $(e.target).closest(SECTION_SEL);
            
@@ -1244,7 +1246,9 @@
         var prevTime = new Date().getTime();
 
         function MouseWheelHandler(e) {
-            
+            if ($('#form_shadow').is(':visible')) {
+                return false;
+            }
             var curTime = new Date().getTime();
             var isNormalScroll = $(COMPLETELY_SEL).hasClass(NORMAL_SCROLL);
            
@@ -3038,7 +3042,7 @@
          */
         isScrolled: function(type, scrollable) {
             var scroller = scrollable.data('iscrollInstance');
-            window.ggg2 = scrollable;
+            
             //no scroller?
             if (!scroller) {
                  

@@ -21,6 +21,7 @@ $('.form').submit(function () {
 
     return !is_error;
 });
+
 $('.callback-click').on('click touchstart', function() {
     $('#form_shadow,#callback_form').fadeIn();
     return false;

@@ -71,10 +71,17 @@
                             <li class="left-menu__item"><a href="#">Сиропы</a></li>
                             <li class="left-menu__item"><a href="#">Топпинги</a></li>
                             <li class="left-menu__item"><a href="#">Сахар</a></li>
-                            <li class="left-menu__item left-menu__item_active">
+                            <li class="left-menu__item left-menu__item_opened">
                                 <a href="#">Кофемашины</a>
                                 <ul class="left-menu__sublist">
-                                    <li class="left-menu__item"><a href="#">Nivona</a></li>
+                                    <li class="left-menu__item left-menu__item_has-child">
+                                        <a href="#">Nivona</a>
+                                        <ul class="left-menu__sublist">
+                                            <li class="left-menu__item"><a href="#">Товар 1</a></li>
+                                            <li class="left-menu__item"><a href="#">Товар 2</a></li>
+                                            <li class="left-menu__item"><a href="#">Товар 3</a></li>
+                                        </ul>
+                                    </li>
                                     <li class="left-menu__item left-menu__item_active"><a href="#">Saeco</a></li>
                                     <li class="left-menu__item"><a href="#">Saeco-Philips</a></li>
                                     <li class="left-menu__item"><a href="#">Kaffit Franke</a></li>
@@ -356,12 +363,14 @@
                  </span>
             </p><br>
             <p>
-                <select name="mark" class="selectbox" placeholder="марку">
-                    <option value="" style="visibility: hidden;">Марка</option>
-                    <option value="1">Марка 1</option>
-                    <option value="2">Марка 2</option>
-                    <option value="3">Марка 3</option>
-                </select>
+                <label class="select_outer">
+                    <select name="mark" class="selectbox" placeholder="марку">
+                        <option value="" style="visibility: hidden;">Марка</option>
+                        <option value="1">Марка 1</option>
+                        <option value="2">Марка 2</option>
+                        <option value="3">Марка 3</option>
+                    </select>
+                </label>
                 <span class="errors"></span>
             </p>
             <p>
@@ -402,7 +411,7 @@
             $('.mobile-menu-block').fadeOut();
         })
         jQuery('.left-menu__sublist').prev().click(function () {
-            jQuery(this).next().stop().slideToggle().parent().toggleClass('left-menu__item_active');
+            jQuery(this).next().stop().slideToggle().parent().toggleClass('left-menu__item_opened');
             return false;
         });
         $('.catalog-menu .catalog-menu__close-button').click(function () {

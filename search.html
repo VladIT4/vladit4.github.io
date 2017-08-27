@@ -61,12 +61,12 @@
                 <div class="static-page content">
                     <div class="mini-page">
                         <div class="big-search">
-                            <input type="text" placeholder=" Искать по сайту" class="big-search__input">
+                            <input type="text" placeholder=" Искать по сайту" value="Torrefazione" class="big-search__input">
                         </div>
                         <div class="big-search__result">
                             <!--<div class="big-seach__not-found">Ничего не найдено</div>-->
                             <div class="big-search__item">
-                                <h3>Компания «Torrefazione Amigos S.n.c di Severino Mingardi & C.»</h3>
+                                <h3>Компания «<mark>Torrefazione</mark> Amigos S.n.c di Severino Mingardi & C.»</h3>
                                 <p>
                                     Вот, что рассказал о своём предприятии Северино Мингарди, являющийся также и председателем правления: «Когда я создавал это
                                 предприятие, я собирался вложить в него все свои силы и положительную энергию. В организацию
@@ -76,7 +76,7 @@
                                 <a href="#" class="big-search__link">Читать полностью</a>
                             </div>
                             <div class="big-search__item">
-                                <h3>Компания «Torrefazione Amigos S.n.c di Severino Mingardi & C.»</h3>
+                                <h3>Компания «<mark>Torrefazione</mark> Amigos S.n.c di Severino Mingardi & C.»</h3>
                                 <p>
                                     Вот, что рассказал о своём предприятии Северино Мингарди, являющийся также и председателем правления: «Когда я создавал это
                                     предприятие, я собирался вложить в него все свои силы и положительную энергию. В организацию
@@ -146,12 +146,14 @@
                  </span>
             </p><br>
             <p>
-                <select name="mark" class="selectbox" placeholder="марку">
-                    <option value="" style="visibility: hidden;">Марка</option>
-                    <option value="1">Марка 1</option>
-                    <option value="2">Марка 2</option>
-                    <option value="3">Марка 3</option>
-                </select>
+                <label class="select_outer">
+                    <select name="mark" class="selectbox" placeholder="марку">
+                        <option value="" style="visibility: hidden;">Марка</option>
+                        <option value="1">Марка 1</option>
+                        <option value="2">Марка 2</option>
+                        <option value="3">Марка 3</option>
+                    </select>
+                </label>
                 <span class="errors"></span>
             </p>
             <p>

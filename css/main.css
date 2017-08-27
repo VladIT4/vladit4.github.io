@@ -354,6 +354,9 @@ table {
     width: 504px;
     margin: 0px 71px;
     margin-top: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 .big-lease__more {
     display: inline-block;
@@ -391,11 +394,11 @@ table {
     display: inline-block;
     margin-right: 20px;
     position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     line-height: 20px;
 }
 .big-lease__buy:hover {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .scroll-block__page_white .big-lease__buy {
@@ -526,22 +529,22 @@ table {
 .services__more {
     float: right;
     font-size: 18px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     line-height: 20px;
 }
 .services__more:hover {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .services__more:active, .services__more:hover {
     text-decoration: none;
 }
 .services__item .big-lease__buy {
     font-size: 18px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     text-decoration: none;
 }
 .services__item .big-lease__buy:hover {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .big-lease__description .product-description__item {
     height: 300px;
@@ -549,6 +552,7 @@ table {
 .scroll-block__page_product .big-lease__image {
     margin: 0px;
     text-align: center;
+    height: 400px;
 }
 .big-lease__description img {
     margin: 10px 5px;
@@ -623,14 +627,7 @@ table {
     opacity: 1;
     display: block;
 }
-.scroll-block__page_lease .big-lease__price-block {
-    opacity: 0;
-    display: none;
-}
-.scroll-block__page_lease .big-lease__price-block_active {
-    display: block;
-    opacity: 1;
-}
+ 
 .search__button {
     width: 20px;
     height: 20px;
@@ -678,6 +675,7 @@ table {
     height: 17px;
     display: inline-block;
     margin: 29px;
+    cursor: pointer;
 } 
 .scroll-block__page_white .mobile-menu__button {
     background: url(../img/mobile-menu.svg);
@@ -724,7 +722,18 @@ table {
 .big-lease-products__slider .bx-pager {
     display: none;
 }
+.left-menu__item_has-child > a {
+    background: url(../img/menu-arrow.svg) no-repeat 0px 4px;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+.google-map {
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 0px;
+}
 /* Responsive */
+ 
 @media only screen and (max-width: 1265px) {
 
     .footer-menu ul {
@@ -735,7 +744,7 @@ table {
     .fp-tableCell {
         width: auto;
     }
-    .lease-footer-menu {
+    .lease-footer-menu, body .static-footer {
         width: 100%;
     }
    
@@ -834,8 +843,9 @@ table {
     }
     .big-lease__description {
         order: 1;
-        width: 300px;
+        width: 346px;
         margin-top: 16px;
+        padding-left: 0;    
     }
     .big-lease__image {
         order: 3;
@@ -844,6 +854,7 @@ table {
     }
     .big-lease__more {
         order: 2;
+      
     }
     .big-lease__link {
         margin-top: 9px;
@@ -868,17 +879,27 @@ table {
         width: 695px;
     }
 }
+@media only screen and (max-width: 1180px) and (min-width: 684px) {
+    .scroll-block__page_product .big-lease__more {
+        margin-top: 118px;
+    }
+}
 @media only screen and (max-width: 835px) {
     .scroll-block__page .big-lease {
         padding-bottom: 60px;
     }
-    
+    .scroll-block__page_lease .big-lease__description {
+        padding-left: 30px;
+    }
+    .scroll-block__page_lease .big-lease__more {
+        width: 330px;
+    }
     .big-lease__description {
         padding-left: 60px;
         width: 44%;
         box-sizing: border-box;
         padding-right: 60px;
-        margin-top: 13px;
+        margin-top: 7px;
     }
  
     .big-lease__link {
@@ -935,6 +956,15 @@ table {
         right: 31px;
         top: 27px;
         outline: none;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .scroll-block__page_lease .big-lease__description {
+        width: 40%;
+    }
+    .scroll-block__page_lease .big-lease__more {
+        width: 30%;
     }
 }
 @media only screen and (max-width: 660px) {
@@ -1045,11 +1075,47 @@ table {
     }
 }
 @media only screen and (max-width: 540px) {
-  
+    .scroll-block__page_lease .big-lease__description {
+        padding: 0px;
+        width: 50%;
+        margin: 0px;
+        padding-left: 19px;
+        margin-top: -13px;
+    }
+    .scroll-block__page_lease .big-lease__price-block {
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        left: 0px;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .scroll-block__page_lease .big-lease__description * {
+        display: none;
+    }
+    .scroll-block__page_lease .big-lease__description h2 {
+        display: block;
+    }
+    .lease-footer-menu {
+        display: none;
+    }
+    .big-lease__footer-menu {
+        padding: 0px 32px;
+        margin-top: -9px;
+        display: block;
+        position: static;
+        order: 3;
+    }
 }
+
 @media only screen and (max-width: 371px) {
     .big-lease__description {
         width: auto;
+    }
+    .scroll-block__page_lease .big-lease__description {
+        width: 100%;
     }
     .mobile-menu__button {
         margin: 20px 22px;
@@ -1082,14 +1148,9 @@ table {
     .big-lease {
         padding-top: 0px;
     }
-    .lease-footer-menu {
-        display: none;
-    }
-    .big-lease__footer-menu {
-        display: block;
-        position: static;
-        order: 3;
-    }
+   
+    
+ 
     .lease-footer-menu__item {
         font-size: 16px;
         padding: 0px 8px;
@@ -1131,10 +1192,7 @@ table {
         padding-left: 19px;
         margin-top: -13px;
     }
-    .big-lease__footer-menu {
-        padding: 0px 32px;
-        margin-top: -9px;
-    }
+    
     .services__block {
         width: 300px;
         padding-bottom: 1px;
@@ -1176,7 +1234,7 @@ table {
     .footer-menu__item {
         padding: 0px 12px;
     }
-    body .bx-wrapper .bx-controls-direction a {
+    body .bx-wrapper .bx-controls-direction a, body .similar-block .bx-wrapper .bx-controls-direction a {
         width: 16px;
         height: 16px;
         margin-top: -8px;
@@ -1197,12 +1255,18 @@ table {
     .scroll-block__page_product .big-lease__image {
         display: none;
     }
-    .scroll-block__page_product .big-lease__description {
+    .scroll-block__page_product .big-lease__description, .scroll-block__page_lease .big-lease__description {
         display: inline-block;
         width: 50%;
         padding: 0px;
         margin: 0px;
         margin-top: 10px;
+    }
+    .scroll-block__page_lease .big-lease__more {
+        width: 34%;
+    }
+    .scroll-block__page_lease .big-lease__link {
+        margin-top: 21px;
     }
     .scroll-block__page_product .big-lease__description h2 {
         line-height: 30px;
@@ -1245,6 +1309,9 @@ table {
         padding: 30px 20px;
         box-sizing: border-box;
         text-align: center;
+    }
+    .scroll-block__page_lease  .big-lease__price-block {
+        bottom: 25px;
     }
     .big-lease-products__slider {
         margin-top: 0px;
@@ -1388,9 +1455,16 @@ table {
 }
 .left-menu__sublist {
     padding: 18px 26px 0px;
+    display: none;
+}
+.left-menu__item_opened > .left-menu__sublist {
+    display: block;
 }
 .left-menu__sublist .left-menu__item_active a {
     font-weight: bold;
+}
+.left-menu__sublist .left-menu__sublist {
+    padding-left: 6px;
 }
 /* catalog list */
 .catalog-list {
@@ -1422,7 +1496,7 @@ table {
     vertical-align: top;
     padding: 0px 7px;
     margin-bottom: 35px;
-}0
+}
 .catalog-product:hover {
     box-shadow: 0 12px 21px rgba(36, 36, 36, 0.15);
     border-radius: 3px;
@@ -1433,6 +1507,11 @@ table {
 .catalog-button-more__link{
     font-size: 18px; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+.catalog-button-more__link:hover {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 .catalog-button-buy a {
     font-size: 18px;
@@ -1555,6 +1634,13 @@ table {
     display: inline-block;
 }
 .product__back {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.product__back:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+}
+.product__back svg {
     margin-left: -12px;
 }
 .product__title {
@@ -1768,6 +1854,7 @@ table {
     padding: 0px 30px;
     position: relative;
     z-index: 10;
+    padding-bottom: 80px;
 }
 .content h1 {
     font-weight: 700;
@@ -1780,12 +1867,21 @@ table {
     font-size: 30px;
     font-weight: 400;
     margin: 17px 0px;
-    line-height: 35px;
+    line-height: 25px;
+}
+.content h3 {
+    padding: 5px 0px;
 }
 .content li {
     margin: 19px 0px;
-    list-style-type: disc;
-    margin-left: 20px;
+    list-style-type: none;
+}
+.content li:before {
+    content: "•";
+    font-size: 18px;
+    vertical-align: middle;
+    line-height: 20px;
+    padding-right: 6px;
 }
 .mini-page {
     max-width: 630px;
@@ -1795,12 +1891,16 @@ table {
 .static-footer {
     color: #4b4b4b;
     font-size: 14px;
-    width: 100%;
+    width: 1280px;
     padding: 0px 11px;
-    padding-top: 100px;
+    padding-top: 25px;
     padding-bottom: 10px;
     line-height: 16px;
     box-sizing: border-box;
+    position: fixed;
+    background: white;
+    bottom: 0px;
+    z-index: 10;
 }
 .static-footer__contacts {
     width: 49%;
@@ -1838,7 +1938,6 @@ table {
     font-size: 20px;
     font-weight: 500;
     border: 1px solid #000000;
-    border-radius: 3px;
     padding: 7px 21px;
     display: inline-block;
     text-align: center;
@@ -2032,6 +2131,8 @@ table {
     height: 129px;
     border: 1px solid #b6b7bd;
     padding: 10px;
+    font-size: 18px;
+    font-family: Roboto;
 }
 .contact-form__text:focus, .contact-form__message textarea:focus {
     border-color: black;
@@ -2043,9 +2144,10 @@ table {
 .errors {
     display: block;
     height: 20px;
-    padding: 2px 0px;
+    padding: 0px 0px;
     box-sizing: border-box;
     color: red;
+    font-size: 13px;
 }
 .contact-form__main-fields {
     width: 420px;
@@ -2059,6 +2161,7 @@ table {
 }
 .checkbox + label {
     font-size: 18px;
+    cursor: pointer;
 }
 .checkbox + label:before {
     content: '';
@@ -2149,7 +2252,7 @@ table {
 .modal-form__title {
     font-size: 30px;
     font-weight: 400;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     margin-top: 18px;
 }
 .modal-form form {
@@ -2181,7 +2284,11 @@ table {
     font-weight: 400;
     padding: 7px 10px;
     width: 100%;
-    border: 1px solid #b6b7bd;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: white url(../img/arrow.png) no-repeat 95% center;
 }
 .service-picture {
     display: inline-block;
@@ -2230,4 +2337,16 @@ table {
         height: 486px;
         margin-top: -243px;
     }
+    .lease-footer-menu, body .static-footer {
+        position: static;
+    }
 }
+.select_outer {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border: 1px solid #b6b7bd;
+}
+ 

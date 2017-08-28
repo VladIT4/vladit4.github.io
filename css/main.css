@@ -556,6 +556,12 @@ table {
 }
 .big-lease__description img {
     margin: 10px 5px;
+    background: black;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+}
+.big-lease__description img:hover {
+    background: #e8bb90;
 }
 .scroll-block__page_product .big-lease {
     display: block;
@@ -2349,6 +2355,4 @@ table {
     overflow: hidden;
     border: 1px solid #b6b7bd;
 }
-.coffe_man:hover {
-    opacity: 0.5;
-}
+ 

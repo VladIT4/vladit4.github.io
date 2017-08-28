@@ -1,4 +1,8 @@
- 
+jQuery('.coffe_man img').each(function () {
+    var $this = jQuery(this);
+    var src = $this.attr('src');
+    $this.attr('src', './img/empty.png').css({ 'mask-image': 'url(' + src + ')', '-webkit-mask-image': 'url(' + src + ')' });
+});
 $('.scroll-block').fullpage({
     anchors: ['main', 'lease', 'service', 'coffee-machines', 'coffee', 'tea', 'assortment', 'cleaners'],
     scrollOverflow: true,

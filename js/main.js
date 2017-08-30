@@ -44,11 +44,5 @@ $('.mobile-menu__close-button').click(function (e) {
 })
  
 $(window).resize(function() {
-    if ($('.static-footer').length) {
-        if ($(window).width() <= 420) {
-            $('.scroll-block__page').css('padding-bottom', 0);
-        }
-        else 
-            $('.scroll-block__page').css('padding-bottom', $('.static-footer').outerHeight() + 15);
-    }
+    jQuery('.static-page').css('min-height', jQuery(window).height() - jQuery('.header').outerHeight() + jQuery('.static-footer').outerHeight() - 164)
 }).resize();

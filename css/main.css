@@ -729,8 +729,6 @@ table {
     display: none;
 }
 .left-menu__item_has-child > a {
-    background: url(../img/menu-arrow.svg) no-repeat 0px 4px;
-    padding-left: 20px;
     margin-left: -20px;
 }
 .google-map {
@@ -1446,10 +1444,7 @@ table {
     font-size: 18px;
     font-weight: 400;
 }
-.left-menu__list > .left-menu__item > a  {
-    background: url(../img/menu-arrow.svg) no-repeat 0px 4px;
-    padding-left: 20px;
-}
+ 
 .left-menu__item_active {
     display: block;
 }
@@ -2362,4 +2357,13 @@ table {
     overflow: hidden;
     border: 1px solid #b6b7bd;
 }
- 
+i.left-menu__icon {
+    background: url(../img/menu-arrow.svg) no-repeat 0px 4px;
+    width: 15px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 6px;
+}
+.left-menu__item_opened > a > i.left-menu__icon {
+    background-position: 0px -30px;
+}

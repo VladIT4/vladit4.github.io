@@ -1860,7 +1860,6 @@ table {
     padding: 0px 30px;
     position: relative;
     z-index: 10;
-    padding-bottom: 80px;
 }
 .content h1 {
     font-weight: 700;
@@ -2285,6 +2284,13 @@ table {
         padding: 0;
     }
 }
+@media only screen and (min-height: 720px) and (min-width: 1281px) {
+    .big-lease-products__slider {
+        position: absolute;
+        bottom: 50px;
+        width: 1280px;
+    }
+}
 .selectbox {
     font-size: 18px;
     font-weight: 400;
@@ -2295,6 +2301,7 @@ table {
     -moz-appearance: none;
     appearance: none;
     background: white url(../img/arrow.png) no-repeat 95% center;
+    cursor: pointer;
 }
 .service-picture {
     display: inline-block;

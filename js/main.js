@@ -43,3 +43,12 @@ $('.mobile-menu__close-button').click(function (e) {
     $('.mobile-menu-block').fadeOut();
 })
  
+$(window).resize(function() {
+    if ($('.static-footer').length) {
+        if ($(window).width() <= 420) {
+            $('.scroll-block__page').css('padding-bottom', 0);
+        }
+        else 
+            $('.scroll-block__page').css('padding-bottom', $('.static-footer').outerHeight() + 15);
+    }
+}).resize();

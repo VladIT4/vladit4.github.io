@@ -1897,10 +1897,10 @@ table {
     padding-bottom: 10px;
     line-height: 16px;
     box-sizing: border-box;
-    position: fixed;
     background: white;
     bottom: 0px;
     z-index: 10;
+    margin-top: 80px;
 }
 .static-footer__contacts {
     width: 49%;
@@ -2009,7 +2009,6 @@ table {
     max-width: 300px;
     text-align: center;
     margin: 70px auto;
-    margin-bottom: 230px;
 }
 .big-seach__not-found {
     text-align: center;
@@ -2367,3 +2366,5 @@ i.left-menu__icon {
 .left-menu__item_opened > a > i.left-menu__icon {
     background-position: 0px -30px;
 }
+
+html, body {height: 100%;}
